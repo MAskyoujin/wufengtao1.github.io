@@ -1,0 +1,489 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    /*css初始化*/
+        body, div, ul, li, input, p, h1, h2, h3, h4, h5, h6{
+            margin: 0;
+            padding: 0;
+            font:12px simsun;
+            color:#000;
+        }
+        ul, li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color:#000;
+        }
+        .fl{
+            float: left;
+
+        }
+        .fr{
+            float: right;
+        }
+
+        /*顶部导航开始*/
+        .top-nav{
+            height: 26px;
+            background: #F7F7F7;
+            border-bottom: 1px solid #D8D8D8;
+        }
+        .top-nav-con{
+            width: 970px;
+            margin: 0 auto;
+            height: 26px;
+        }
+        .top-nav-r ul li{
+            float: left;
+            height: 26px;
+            line-height: 26px;
+
+        }
+        .top-nav-l{
+            height: 26px;
+            line-height: 26px;
+        }
+
+        .top-nav-r ul li a{
+            display: inline-block;
+            height: 26px;
+            background: url("images/sj.png") no-repeat right;
+            padding:0 10px;
+
+        }
+        /*logo部分开始*/
+        .logo{
+            width: 970px;
+            height: 84px;
+            margin: 0 auto;
+        }
+        .logo-pic{
+            width: 200px;
+            height: 84px;
+        }
+        .search{
+            width: 519px;
+            height: 30px;
+            border: 1px solid #C9C9C9;
+            background: #F9F9F9;
+            margin-top: 28px;
+            padding:5px 5px 5px 4px;
+        }
+        .search input[type="text"]{
+            width: 419px;
+            height: 28px;
+            border:1px solid #A6A6A6;
+            border-right: 0 none;
+            vertical-align: middle;
+        }
+        .search input[type="button"]{
+            width: 99px;
+            height: 30px;
+            background: url("images/serch.png");
+            vertical-align: middle;
+        }
+        /*主导航开始*/
+        .nav{
+            width: 970px;
+            height: 25px;
+            margin: 10px auto;
+            border-bottom: 2px solid #0266a3;
+        }
+        .nav li{
+            float: left;
+        }
+        .nav li a{
+            display: inline-block;
+            height: 25px;
+            line-height: 25px;
+            padding:0 15px;
+            color: #0266a3;
+        }
+        .nav li a:hover{
+            background:#0266a3;
+            color:#fff;
+        }
+        /*宠物市场部分开始*/
+        .mar{
+            width: 970px;
+            height: 210px;
+            margin: 0 auto;
+
+        }
+        .mar-left{
+            width: 200px;
+            height: 210px;
+            background: #EBF0F6;
+        }
+        .mar-title{
+            height: 30px;
+            background: #0266a3;
+            line-height: 30px;
+            color:#fff;
+            padding-left: 20px;
+        }
+        .mar-list{
+            margin-top: 5px;
+        }
+        .mar-list li{
+            height: 28px;
+            line-height: 28px;
+            padding-left: 39px;
+        }
+        .mar-list li.icon1{
+            background: url("images/icon_1.png") no-repeat 9px ;
+        }
+        /*狗狗种类*/
+        .bud{
+            height: 34px;
+            width: 948px;
+            margin: 14px auto 11px ;
+            background: #ECF1F7;
+            border-top: #C3D7E4 2px solid;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 34px;
+            padding-left: 22px;
+        }
+        /*狗狗种类列表*/
+        .pro{
+            width: 970px;
+            height: 344px;
+            margin:0 auto;
+
+
+        }
+        .pro-left{
+            width: 727px;
+            height: 344px;
+            border: 1px solid #D8D8D8;
+
+        }
+        .pro-right{
+            width: 228px;
+            height: 344px;
+            border: 1px solid #D8D8D8;
+        }
+        .pro-left-t{
+            width: 656px;
+            height: 142px;
+            margin:15px 0px 14px 26px;
+        }
+        .pro-pic-l{
+            width: 318px;
+            height: 142px;
+
+        }
+        .pro-pic-r{
+            width: 318px;
+            height: 142px;
+
+        }
+        .pro-pic-ll{
+            width: 97px;
+            height: 142px;
+
+        }
+        .pro-pic-llt{
+            width: 97px;
+            height: 100px;
+            text-align: center;
+        }
+        .pro-pic-llt img{
+            margin-top:17.5px;
+        }
+        .pro-pic-btn input{
+            width: 98px;
+            height: 26px;
+            background: url("images/buy.png");
+            margin-top: 15px;
+        }
+        .pro-pic-lr p{
+            margin-left: 10px;
+            font-size:14px;
+        }
+        .pro-pic-lr p span{
+            color:#ff0000;
+            font-weight: 700;
+        }
+        .pro-pic-lr p del{
+            font-size: 12px;
+        }
+        .pro-pic-lr p.txt1{
+            height: 28px;
+            margin-top:10px;
+        }
+        .pro-pic-lr p.txt2{
+            height: 49px;
+        }
+        .pro-pic-lr p.txt3{
+            height: 38px;
+        }
+        .pro-line{
+            border-top: 1px solid black;
+            margin: 0 5px;
+        }
+        .pro-right-title{
+            height: 28px;
+            line-height: 28px;
+            padding-left: 15px;
+            background: #FBFBFB;
+            border-bottom: 1px solid #E0E6F0;
+        }
+        .pro-right ul{
+            margin-top: 17px;
+        }
+        .pro-right ul li{
+            padding-left: 25px;
+            height: 24px;
+            background: url("images/li_bg.png") no-repeat 10px 6px;
+        }
+        .pro-right ul li a:hover{
+            color:#ff0000;
+            text-decoration: underline;
+        }
+        /*狗粮种类列表*/
+        .dogFood{
+            width: 970px;
+            height: 326px;
+            margin: 0 auto;
+        }
+        .dogFood-left{
+            width: 722px;
+            height: 326px;
+        }
+        .dogFood-l-t{
+            height: 23px;
+            border-bottom: 2px solid #00B0E7;
+        }
+        .dogFood-l-b{
+            height: 301px;
+            border: 1px solid #CACACA;
+        }
+        .dogFood-l-t h3{
+            width: 100px;
+            text-align:right;
+            font-size: 14px;
+            color:#00B0E7;
+            font-weight: 700;
+            height: 23px;
+            line-height: 23px;
+            margin-left: auto;
+
+        }
+        .dogFood-pic{
+            width: 164px;
+            text-align: center;
+            margin: 5px 0 0 13px;
+        }
+        .dogFood-pic p.et1{
+            height: 43px;
+            margin-top: 9px;
+        }
+        .dogFood-pic p.et2, .dogFood-pic p.et3{
+            color:#999;
+            height: 24px;
+        }
+        .dogFood-pic p.et3 del, .dogFood-pic p.et4 span{
+            color:#990000;
+        }
+        .dogFood-right{
+            width: 218px;
+            height: 326px;
+        }
+        /*foot部分*/
+        .copyright{
+            height: 91px;
+            text-align: center;
+        }
+        .copyright p.copy{
+            height: 24px;
+            margin-top: 13px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <div class="top-nav">
+        <div class="top-nav-con">
+            <div class="top-nav-l fl">您好，欢来到电玩世界</div>
+            <div class="top-nav-r fr">
+                <ul>
+                    <li><a href="#">网站导航</a></li>
+                    <li><a href="#">我的电玩</a></li>
+                    <li><a href="#">电玩会员</a></li>
+                    <li><a href="#">我的收藏</a></li>
+                    <li><a href="#">客户服务</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- logo部分 -->
+    <div class="logo">
+        <div class="logo-pic fl"><img src="images/案例logo.png" alt=""></div>
+        <div class="search fr">
+            <input type="text" value="请输入关键字"><input type="button">
+        </div>
+    </div>
+    <!-- 主导航部分 -->
+    <div class="nav">
+        <ul>
+            <li><a href="#">首页</a></li>
+        </ul>
+    </div>
+    <!-- 宠物市场部分 -->
+    <div class="mar">
+        <!-- 市场中间盒子 -->
+        <div class="mar-cen fl"><img src="images/700.png" alt=""></div>
+
+    </div>
+    <!-- 狗狗种类 -->
+    <div class="bud">
+    电玩种类
+    </div>
+    <!-- 狗狗种类列表 -->
+    <div class="pro">
+       <!-- 左边大盒子 -->
+        <div class="pro-left fl">
+            <!-- 左边大盒子上部分 -->
+            <div class="pro-left-t">
+                <!-- 左上大盒子左边盒子 -->
+                <div class="pro-pic-l fl">
+                    <div class="pro-pic-ll fl">
+                        <div class="pro-pic-llt"><img src="images/狗狗种类.png" alt=""></div>
+                        <div class="pro-pic-btn"><a href="1.html" target="_blank"><input type="button"></a></div>
+                    </div>
+                    <div class="pro-pic-lr fl">
+                        <p class="txt1">扫雷</p>
+                        <p class="txt2">难度：困难</p>
+
+                        <p class="txt3"><span>0</span> <del>¥5000.00</del></p>
+                        <p class="txt4">限量<span>200</span>件已售出<span>20</span>件</p>
+                    </div>
+                </div>
+                <div class="pro-pic-l fr">
+                    <div class="pro-pic-ll fl">
+                        <div class="pro-pic-llt"><img src="images/狗狗种类.png" alt=""></div>
+                        <div class="pro-pic-btn"><input type="button"></div>
+                    </div>
+                    <div class="pro-pic-lr fl">
+                        <p class="txt1">别踩白块儿</p>
+                        <p class="txt2">难度：中等</p>
+
+                        <p class="txt3"><span>0</span> <del>¥4000.00</del></p>
+                        <p class="txt4">限量<span>200</span>件已售出<span>20</span>件</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 左边大盒子中线 -->
+            <div class="pro-line"></div>
+            <!-- 左边大盒子下部分 -->
+            <div class="pro-left-t">
+                <!-- 左上大盒子左边盒子 -->
+                <div class="pro-pic-l fl">
+                    <div class="pro-pic-ll fl">
+                        <div class="pro-pic-llt"><img src="images/狗狗种类.png" alt=""></div>
+                        <div class="pro-pic-btn"><input type="button"></div>
+                    </div>
+                    <div class="pro-pic-lr fl">
+                        <p class="txt1">别踩白块儿</p>
+                        <p class="txt2">理解力高、容易训练、温和、忠诚</p>
+
+                        <p class="txt3"><span>4000.00</span> <del>¥5000.00</del></p>
+                        <p class="txt4">限量<span>200</span>件已售出<span>20</span>件</p>
+                    </div>
+                </div>
+                <div class="pro-pic-l fr">
+                    <div class="pro-pic-ll fl">
+                        <div class="pro-pic-llt"><img src="images/狗狗种类.png" alt=""></div>
+                        <div class="pro-pic-btn"><input type="button"></div>
+                    </div>
+                    <div class="pro-pic-lr fl">
+                        <p class="txt1">聪明、学习能力强</p>
+                        <p class="txt2">理解力高、容易训练、温和、忠诚</p>
+
+                        <p class="txt3"><span>4000.00</span> <del>¥5000.00</del></p>
+                        <p class="txt4">限量<span>200</span>件已售出<span>20</span>件</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 右边大盒子 -->
+        <div class="pro-right fr">
+            <div class="pro-right-title">我爱咨询</div>
+            <ul>
+                <li><a href="#">怎么样才能一夜暴富 </a></li>
+                <li><a href="#">骚年醒醒，该搬砖了 </a></li>
+                <li><a href="#">怎么样才能玩好扫雷 </a></li>
+                <li><a href="#">其实我也不太会玩 </a></li>
+                <li><a href="#">怎么样才能玩好白块</a></li>
+                <li><a href="#">点就完事了 </a></li>
+                <li><a href="#">怎么样才能玩好九宫格 </a></li>
+                <li><a href="#">说实话这个游戏很无聊 </a></li>
+                <li><a href="#">怎么样才能玩好王子杀 </a></li>
+                <li><a href="#">保持一颗恒心 </a></li>
+                <li><a href="#">杨永信究竟何许人也 </a></li>
+                <li><a href="#">亲，这边的免费电疗需要吗 </a></li>
+            </ul>
+        </div>
+    </div>
+    <!--狗粮种类-->
+    <div class="bud">
+    狗粮种类
+    </div>
+    <!-- 狗粮种类列表 -->
+    <div class="dogFood">
+        <div class="dogFood-left fl">
+            <div class="dogFood-l-t">
+                 <h3>查看更多>></h3>
+            </div>
+            <div class="dogFood-l-b">
+                <div class="dogFood-pic fl">
+                    <img src="images/狗粮.png" alt="">
+                    <p class="et1">耐威克狗粮泰迪贵宾成犬5斤2.5KG小型犬粮</p>
+                    <p class="et2">适合年龄1个月-3个月的幼犬</p>
+                    <p class="et3">市场价：<del>¥59</del></p>
+                    <p class="et4">直销价：<span>¥39</span></p>
+                </div>
+                <div class="dogFood-pic fl">
+                    <img src="images/狗粮.png" alt="">
+                    <p class="et1">耐威克狗粮泰迪贵宾成犬5斤2.5KG小型犬粮</p>
+                    <p class="et2">适合年龄1个月-3个月的幼犬</p>
+                    <p class="et3">市场价：<del>¥59</del></p>
+                    <p class="et4">直销价：<span>¥39</span></p>
+                </div>
+                <div class="dogFood-pic fl">
+                    <img src="images/狗粮.png" alt="">
+                    <p class="et1">耐威克狗粮泰迪贵宾成犬5斤2.5KG小型犬粮</p>
+                    <p class="et2">适合年龄1个月-3个月的幼犬</p>
+                    <p class="et3">市场价：<del>¥59</del></p>
+                    <p class="et4">直销价：<span>¥39</span></p>
+                </div>
+                <div class="dogFood-pic fl">
+                    <img src="images/狗粮.png" alt="">
+                    <p class="et1">耐威克狗粮泰迪贵宾成犬5斤2.5KG小型犬粮</p>
+                    <p class="et2">适合年龄1个月-3个月的幼犬</p>
+                    <p class="et3">市场价：<del>¥59</del></p>
+                    <p class="et4">直销价：<span>¥39</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="dogFood-right fr">
+            <img src="images/右边狗图片.png" alt="">
+
+
+        </div>
+    </div>
+
+    <!--foot部分-->
+    <div class="copyright">
+        <p class="copy">By 机电三班 吴封涛</p>
+    </div>
+</body>
+</html>
